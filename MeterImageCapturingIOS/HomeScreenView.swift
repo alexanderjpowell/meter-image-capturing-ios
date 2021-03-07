@@ -28,7 +28,7 @@ struct HomeScreenView: View {
                     Label("User 3", systemImage: "person")
                     Label("User 4", systemImage: "person")
                 }
-                NavigationLink(destination: MainScreenView()) {
+                NavigationLink(destination: SignInView()) {
                     Label("Settings", systemImage: "gear")
                         .font(.headline)
                 }

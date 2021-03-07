@@ -23,6 +23,8 @@
 		5795CC3C25C78DA1004B79B7 /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795CC3B25C78DA1004B79B7 /* ScanModel.swift */; };
 		5795CC4125C78F25004B79B7 /* MachineScanCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */; };
 		5795CC4625C79259004B79B7 /* CompletedScansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795CC4525C79259004B79B7 /* CompletedScansView.swift */; };
+		57A8D78A25F52D0C0073ACC3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */; };
+		57A8D78F25F53FD80073ACC3 /* FireBaseVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8D78E25F53FD80073ACC3 /* FireBaseVision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		5795CC3B25C78DA1004B79B7 /* ScanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineScanCardView.swift; sourceTree = "<group>"; };
 		5795CC4525C79259004B79B7 /* CompletedScansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScansView.swift; sourceTree = "<group>"; };
+		57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		57A8D78E25F53FD80073ACC3 /* FireBaseVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseVision.swift; sourceTree = "<group>"; };
 		7E8B497BDD3295F9DDB0AD20 /* Pods-MeterImageCapturingIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOSTests.release.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOSTests/Pods-MeterImageCapturingIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B2921874E5E6B5A1920A50F /* Pods_MeterImageCapturingIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeterImageCapturingIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92B6B060D143FE947C63B54 /* Pods-MeterImageCapturingIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOS.debug.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOS/Pods-MeterImageCapturingIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				5795CC3B25C78DA1004B79B7 /* ScanModel.swift */,
 				5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */,
 				5795CC4525C79259004B79B7 /* CompletedScansView.swift */,
+				57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */,
+				57A8D78E25F53FD80073ACC3 /* FireBaseVision.swift */,
 			);
 			path = MeterImageCapturingIOS;
 			sourceTree = "<group>";
@@ -432,8 +438,10 @@
 				5754FDED25C60AC100E892E7 /* ContentView.swift in Sources */,
 				5795CC4125C78F25004B79B7 /* MachineScanCardView.swift in Sources */,
 				5754FE1925C60BA000E892E7 /* MainScreenView.swift in Sources */,
+				57A8D78A25F52D0C0073ACC3 /* ImagePicker.swift in Sources */,
 				5795CC4625C79259004B79B7 /* CompletedScansView.swift in Sources */,
 				5754FE1E25C61ECD00E892E7 /* SignInView.swift in Sources */,
+				57A8D78F25F53FD80073ACC3 /* FireBaseVision.swift in Sources */,
 				5795CC1025C74AF4004B79B7 /* HomeScreenView.swift in Sources */,
 				5795CC3C25C78DA1004B79B7 /* ScanModel.swift in Sources */,
 				5754FDEB25C60AC100E892E7 /* MeterImageCapturingIOSApp.swift in Sources */,
@@ -596,6 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MeterImageCapturingIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MeterImageCapturingIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -618,6 +627,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MeterImageCapturingIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MeterImageCapturingIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
