@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+//import FirebaseFunctions
+import Firebase
 
 struct MainScreenView: View {
-    
+    //lazy var functions = Functions.functions()
     @StateObject var viewModel = ViewModel()
     
-    @State private var progressive1: String = ""
-    @State private var progressive2: String = ""
-    @State private var progressive3: String = ""
-    @State private var progressive4: String = ""
-    @State private var progressive5: String = ""
-    @State private var progressive6: String = ""
+//    @State private var progressive1: String = ""
+//    @State private var progressive2: String = ""
+//    @State private var progressive3: String = ""
+//    @State private var progressive4: String = ""
+//    @State private var progressive5: String = ""
+//    @State private var progressive6: String = ""
     
     var body: some View {
 //        VStack {
@@ -84,9 +86,12 @@ struct MainScreenView: View {
 
 extension MainScreenView {
     final class ViewModel: ObservableObject {
+        
         @Published var selectedImage: UIImage?
         @Published var isPresentingImagePicker = false
         private(set) var sourceType: ImagePicker.SourceType = .camera
+        
+        //lazy var functions = Functions.functions()
         
         func takePhoto() {
             sourceType = .camera
@@ -96,7 +101,55 @@ extension MainScreenView {
         func didSelectImage(_ image: UIImage?) {
             selectedImage = image
             isPresentingImagePicker = false
+            //
+            let vision = Vision.vision()
+            let options = VisionCloudTextRecognizerOptions()
+            options.languageHints = ["en"]
+            let textRecognizer = vision.cloudTextRecognizer(options: options)
+            guard let imageData = image?.jpegData(compressionQuality: 1.0) else { return }
+            let base64encodedImage = imageData.base64EncodedString()
+            let visionImage = VisionImage(image: image!)
+            
+            textRecognizer.process(visionImage) { result, error in
+                guard error == nil, let result = result else {
+                    print(error)
+                    return
+                }
+                print(result.text)
+            }
         }
+        
+//        func didSelectImage(_ image: UIImage?) {
+//            selectedImage = image
+//            isPresentingImagePicker = false
+//            //
+//            guard let imageData = image?.jpegData(compressionQuality: 1.0) else { return }
+//            let base64encodedImage = imageData.base64EncodedString(options: .lineLength64Characters)
+//            let requestData = [
+//              "image": ["content": base64encodedImage],
+//              "features": ["type": "DOCUMENT_TEXT_DETECTION"],
+//              "imageContext": ["languageHints": ["en"]]
+//            ]
+//            functions.httpsCallable("annotateImage").call(requestData) { (result, error) in
+//                if let error = error as NSError? {
+//                    if error.domain == FunctionsErrorDomain {
+//                        let code = FunctionsErrorCode(rawValue: error.code)
+//                        let message = error.localizedDescription
+//                        let details = error.userInfo[FunctionsErrorDetailsKey]
+//                        print(code ?? "empty code")
+//                        print(message)
+//                        print(details ?? "empty details")
+//                    }
+//                } else {
+//                    // Function completed succesfully
+//                    print("Function completed succesfully")
+//                    guard let annotation = (result?.data as? [String: Any])?["fullTextAnnotation"] as? [String: Any] else { return }
+//                    print("%nComplete annotation:")
+//                    let text = annotation["text"] as? String ?? ""
+//                    print("%n\(text)")
+//                }
+//            }
+//        }
     }
 }
 

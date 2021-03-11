@@ -65,8 +65,9 @@ struct SignInView: View {
     
     func signin() {
         //Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-            //print(authResult)
-        //}
+        Auth.auth().signIn(withEmail: "test@gmail.com", password: "password") { (authResult, error) in
+            print(authResult!)
+        }
     }
     
     func signout() {
