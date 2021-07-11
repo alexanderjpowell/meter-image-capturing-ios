@@ -13,6 +13,8 @@ struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    @ObservedObject var authService = AuthState()
+    
     var body: some View {
         VStack() {
             Image("mic_logo")
@@ -65,9 +67,25 @@ struct SignInView: View {
     
     func signin() {
         //Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-        Auth.auth().signIn(withEmail: "test@gmail.com", password: "password") { (authResult, error) in
-            print(authResult!)
+        Auth.auth().signIn(withEmail: "test@gmail.com", password: "password") { authResult, error in
+            //print(error)
+//            print(authResult!)
+//            print(Auth.auth().currentUser?.uid)
         }
+        
+//        do {
+//            try Auth.auth().signOut()
+//        } catch let signOutError as NSError {
+//            print("Error signing out: %@", signOutError)
+//        }
+//
+//        Auth.auth().addStateDidChangeListener { auth, user in
+//            if user != nil {
+//                print(user?.uid)
+//            } else {
+//                print("nil")
+//            }
+//        }
     }
     
     func signout() {

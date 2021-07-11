@@ -10,6 +10,10 @@
 		02EB6B763B1079D503883343 /* Pods_MeterImageCapturingIOS_MeterImageCapturingIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087D8C6DE39606EEFA201ECF /* Pods_MeterImageCapturingIOS_MeterImageCapturingIOSUITests.framework */; };
 		0485DD329337A126E9C6CEED /* Pods_MeterImageCapturingIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07185C45D76D937554445B25 /* Pods_MeterImageCapturingIOS.framework */; };
 		147477A608FD723760AB42EF /* Pods_MeterImageCapturingIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2921874E5E6B5A1920A50F /* Pods_MeterImageCapturingIOSTests.framework */; };
+		57017F72269A24EA008D60B4 /* CompletedScansRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57017F71269A24EA008D60B4 /* CompletedScansRepository.swift */; };
+		57017F74269A38BC008D60B4 /* CompletedScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57017F73269A38BB008D60B4 /* CompletedScan.swift */; };
+		57336CF7269B5E210022F3A3 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57336CF6269B5E210022F3A3 /* AuthState.swift */; };
+		57336CF9269B746B0022F3A3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57336CF8269B746B0022F3A3 /* SettingsView.swift */; };
 		5754FDEB25C60AC100E892E7 /* MeterImageCapturingIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754FDEA25C60AC100E892E7 /* MeterImageCapturingIOSApp.swift */; };
 		5754FDED25C60AC100E892E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5754FDEC25C60AC100E892E7 /* ContentView.swift */; };
 		5754FDEF25C60AC400E892E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5754FDEE25C60AC400E892E7 /* Assets.xcassets */; };
@@ -24,6 +28,9 @@
 		5795CC4125C78F25004B79B7 /* MachineScanCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */; };
 		5795CC4625C79259004B79B7 /* CompletedScansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795CC4525C79259004B79B7 /* CompletedScansView.swift */; };
 		57A8D78A25F52D0C0073ACC3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */; };
+		57BFECFF269A9603003869E0 /* ScanDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BFECFE269A9603003869E0 /* ScanDetailsView.swift */; };
+		57BFED01269A9993003869E0 /* EditScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BFED00269A9993003869E0 /* EditScanView.swift */; };
+		57D150572665D23400E126FD /* CompletedScansViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D150562665D23400E126FD /* CompletedScansViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,10 @@
 		154CF9B079BDCD29A82B2E14 /* Pods-MeterImageCapturingIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOS.release.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOS/Pods-MeterImageCapturingIOS.release.xcconfig"; sourceTree = "<group>"; };
 		2F0A6CD89B128984B24840A1 /* Pods-MeterImageCapturingIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOSTests/Pods-MeterImageCapturingIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AA3E9F74A52BC90125F2DAE /* Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57017F71269A24EA008D60B4 /* CompletedScansRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScansRepository.swift; sourceTree = "<group>"; };
+		57017F73269A38BB008D60B4 /* CompletedScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScan.swift; sourceTree = "<group>"; };
+		57336CF6269B5E210022F3A3 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		57336CF8269B746B0022F3A3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5754FDE725C60AC100E892E7 /* MeterImageCapturingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeterImageCapturingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5754FDEA25C60AC100E892E7 /* MeterImageCapturingIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterImageCapturingIOSApp.swift; sourceTree = "<group>"; };
 		5754FDEC25C60AC100E892E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +81,9 @@
 		5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineScanCardView.swift; sourceTree = "<group>"; };
 		5795CC4525C79259004B79B7 /* CompletedScansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScansView.swift; sourceTree = "<group>"; };
 		57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		57BFECFE269A9603003869E0 /* ScanDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailsView.swift; sourceTree = "<group>"; };
+		57BFED00269A9993003869E0 /* EditScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScanView.swift; sourceTree = "<group>"; };
+		57D150562665D23400E126FD /* CompletedScansViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedScansViewModel.swift; sourceTree = "<group>"; };
 		7E8B497BDD3295F9DDB0AD20 /* Pods-MeterImageCapturingIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOSTests.release.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOSTests/Pods-MeterImageCapturingIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B2921874E5E6B5A1920A50F /* Pods_MeterImageCapturingIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeterImageCapturingIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92B6B060D143FE947C63B54 /* Pods-MeterImageCapturingIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterImageCapturingIOS.debug.xcconfig"; path = "Target Support Files/Pods-MeterImageCapturingIOS/Pods-MeterImageCapturingIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +168,13 @@
 				5795CC4025C78F25004B79B7 /* MachineScanCardView.swift */,
 				5795CC4525C79259004B79B7 /* CompletedScansView.swift */,
 				57A8D78925F52D0C0073ACC3 /* ImagePicker.swift */,
+				57D150562665D23400E126FD /* CompletedScansViewModel.swift */,
+				57017F71269A24EA008D60B4 /* CompletedScansRepository.swift */,
+				57017F73269A38BB008D60B4 /* CompletedScan.swift */,
+				57BFECFE269A9603003869E0 /* ScanDetailsView.swift */,
+				57BFED00269A9993003869E0 /* EditScanView.swift */,
+				57336CF6269B5E210022F3A3 /* AuthState.swift */,
+				57336CF8269B746B0022F3A3 /* SettingsView.swift */,
 			);
 			path = MeterImageCapturingIOS;
 			sourceTree = "<group>";
@@ -205,7 +226,7 @@
 				5754FDE325C60AC100E892E7 /* Sources */,
 				5754FDE425C60AC100E892E7 /* Frameworks */,
 				5754FDE525C60AC100E892E7 /* Resources */,
-				5A47DE3FA1C91F6A154E9BE9 /* [CP] Embed Pods Frameworks */,
+				0325D6889C26DE5AEAEB91DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,7 +264,7 @@
 				5754FDFF25C60AC500E892E7 /* Sources */,
 				5754FE0025C60AC500E892E7 /* Frameworks */,
 				5754FE0125C60AC500E892E7 /* Resources */,
-				5D8F9F56D70100B995DB4756 /* [CP] Embed Pods Frameworks */,
+				9797680DE9237BD5CFA8E8F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,7 +346,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A47DE3FA1C91F6A154E9BE9 /* [CP] Embed Pods Frameworks */ = {
+		0325D6889C26DE5AEAEB91DC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,23 +385,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D8F9F56D70100B995DB4756 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8F453BB144478E6FD7D11FB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +405,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9797680DE9237BD5CFA8E8F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests/Pods-MeterImageCapturingIOS-MeterImageCapturingIOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC8263B9FAC371A84E30566E /* [CP] Check Pods Manifest.lock */ = {
@@ -432,14 +453,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57017F74269A38BC008D60B4 /* CompletedScan.swift in Sources */,
 				5754FDED25C60AC100E892E7 /* ContentView.swift in Sources */,
 				5795CC4125C78F25004B79B7 /* MachineScanCardView.swift in Sources */,
 				5754FE1925C60BA000E892E7 /* MainScreenView.swift in Sources */,
 				57A8D78A25F52D0C0073ACC3 /* ImagePicker.swift in Sources */,
+				57BFED01269A9993003869E0 /* EditScanView.swift in Sources */,
 				5795CC4625C79259004B79B7 /* CompletedScansView.swift in Sources */,
+				57336CF7269B5E210022F3A3 /* AuthState.swift in Sources */,
+				57D150572665D23400E126FD /* CompletedScansViewModel.swift in Sources */,
+				57336CF9269B746B0022F3A3 /* SettingsView.swift in Sources */,
+				57017F72269A24EA008D60B4 /* CompletedScansRepository.swift in Sources */,
 				5754FE1E25C61ECD00E892E7 /* SignInView.swift in Sources */,
 				5795CC1025C74AF4004B79B7 /* HomeScreenView.swift in Sources */,
 				5795CC3C25C78DA1004B79B7 /* ScanModel.swift in Sources */,
+				57BFECFF269A9603003869E0 /* ScanDetailsView.swift in Sources */,
 				5754FDEB25C60AC100E892E7 /* MeterImageCapturingIOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +673,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				INFOPLIST_FILE = MeterImageCapturingIOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,6 +696,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				INFOPLIST_FILE = MeterImageCapturingIOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -688,6 +718,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				INFOPLIST_FILE = MeterImageCapturingIOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -708,6 +739,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNZ3QB529X;
 				INFOPLIST_FILE = MeterImageCapturingIOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

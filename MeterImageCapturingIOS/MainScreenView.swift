@@ -11,38 +11,128 @@ import Firebase
 
 struct MainScreenView: View {
     //lazy var functions = Functions.functions()
+    @ObservedObject var completedScansViewModel = CompletedScansViewModel()
     @StateObject var viewModel = ViewModel()
     
-//    @State private var progressive1: String = ""
-//    @State private var progressive2: String = ""
-//    @State private var progressive3: String = ""
-//    @State private var progressive4: String = ""
-//    @State private var progressive5: String = ""
-//    @State private var progressive6: String = ""
+    @State private var machineId: String = ""
+    @State private var progressive1: String = ""
+    @State private var progressive2: String = ""
+    @State private var progressive3: String = ""
+    @State private var progressive4: String = ""
+    @State private var progressive5: String = ""
+    @State private var progressive6: String = ""
+    @State private var progressive7: String = ""
+    @State private var progressive8: String = ""
+    @State private var progressive9: String = ""
+    @State private var progressive10: String = ""
     
     var body: some View {
-//        VStack {
-//            List {
-//                TextField("Progressive 1", text: $progressive1)
-//                TextField("Progressive 2", text: $progressive2)
-//                TextField("Progressive 3", text: $progressive3)
-//                TextField("Progressive 4", text: $progressive4)
-//                TextField("Progressive 5", text: $progressive5)
-//                TextField("Progressive 6", text: $progressive6)
-//            }
-//            .keyboardType(UIKeyboardType.decimalPad)
-//            .listStyle(InsetGroupedListStyle())
-//            HStack {
-//                Button("Scan", action: scan)
-//                Spacer()
-//                Button("Submit", action: submit)
-//            }
-//            .buttonStyle(DefaultButtonStyle())
-//        }
-        VStack(spacing: 32) {
-            imageView(for: viewModel.selectedImage)
-            controlBar()
+        List {
+            Section {
+                TextField("Machine ID", text: self.$machineId)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .foregroundColor(.gray)
+                    .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                    .cornerRadius(5)
+                Group {
+                    TextField("Progressive 1", text: self.$progressive1)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 2", text: self.$progressive2)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 3", text: self.$progressive3)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 4", text: self.$progressive4)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 5", text: self.$progressive5)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 6", text: self.$progressive6)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 7", text: self.$progressive7)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 8", text: self.$progressive8)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 9", text: self.$progressive9)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                    TextField("Progressive 10", text: self.$progressive10)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .foregroundColor(.gray)
+                        .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+                        .textContentType(.password)
+                        .cornerRadius(5)
+                }
+            }
         }
+        VStack {
+            HStack() {
+                Button(action: viewModel.takePhoto) {
+                    HStack {
+                        Text("Scan")
+                            .frame(maxWidth: .infinity)
+                    }.padding()
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(5)
+                    
+                }//.padding(.bottom, 40)
+                Button(action: processImage) {
+                    HStack {
+                        Text("Submit")
+                            .frame(maxWidth: .infinity)
+                    }.padding()
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(5)
+                }//.padding(.bottom, 40)
+            }
+            //controlBar()
+        }.padding()
         .fullScreenCover(isPresented: $viewModel.isPresentingImagePicker, content: {
             ImagePicker(sourceType: viewModel.sourceType, completionHandler: viewModel.didSelectImage)
         })
@@ -60,18 +150,20 @@ struct MainScreenView: View {
         }
     }
     
-    func controlBar() -> some View {
-        HStack(spacing: 32) {
-            Button(action: viewModel.takePhoto, label: {
-                Text("Take a Photo")
-            })
-            Button(action: processImage, label: {
-                Text("Process Image")
-            })
-        }.padding()
-    }
+//    func controlBar() -> some View {
+//        HStack(spacing: 32) {
+//            Button(action: viewModel.takePhoto, label: {
+//                Text("Take a Photo")
+//            })
+//            Button(action: processImage, label: {
+//                Text("Process Image")
+//            })
+//        }.padding()
+//    }
     
     func processImage() {
+        let scan = CompletedScann(machineId: "1234", progressive1: "100", progressive2: "200", progressive3: "300", progressive4: "400", progressive5: "500", progressive6: "600", notes: "some notes")
+        completedScansViewModel.saveToDatabase(scan: scan)
     }
     
     func scan() {
@@ -115,8 +207,40 @@ extension MainScreenView {
                     print(error)
                     return
                 }
-                print(result.text)
+//                print(result.text)
+//                print("-----")
+                let progressives = self.parseText(blocks: result.blocks)
+                print(progressives)
+//                result.blocks.forEach { visionTextBlock in
+//                    print("-----")
+//                    print(visionTextBlock.text)
+//                }
+//                print(result.text)
             }
+        }
+        
+        private func parseText(blocks: [VisionTextBlock]) -> [String] {
+            var ret: [String] = []
+            blocks.forEach { visionTextBlock in
+                let text = visionTextBlock.text.replacingOccurrences(of: ",", with: "")
+                if text.starts(with: "$") || text.starts(with: "S")  {
+                    // get substring after $ or S
+                    let range = visionTextBlock.text.index(after: text.startIndex)..<text.endIndex
+                    if let value = Double(text[range]) {
+                        //print(value)
+                        ret.append(String(value))
+                    } else {
+                        print("\(text[range]) is not a number")
+                    }
+//                    ret.append(visionTextBlock.text)
+//                    visionTextBlock.text
+//                    if visionTextBlock.text.isInt
+//                    visionTextBlock.text.forEach { char in
+//                        if char
+//                    }
+                }
+            }
+            return ret
         }
         
 //        func didSelectImage(_ image: UIImage?) {
